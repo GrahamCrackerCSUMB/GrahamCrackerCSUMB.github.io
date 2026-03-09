@@ -24,7 +24,7 @@ nav a:hover { /*psuedo class*/
     transition: .9s; /*Transition effet*/
 }
 nav a.active{
-    font-size: 3em;
+    font-weight: bold;
     color: red;
 }
 main {
