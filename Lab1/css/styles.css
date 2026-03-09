@@ -1,60 +1,75 @@
 body {
     background-color: black;
     color: gray;
-    }
-    header, main, nav, footer {
-        text-align:center;
-    }
-    nav a { /* Links within "nav" container*/
-        padding:15px;
-        padding-bottom: 4px;
-        font-size: 1.8em;
-        text-decoration: none; /*Removes underline*/
-        color: white; /*By default, links are blue*/
-    }
-    nav a:hover { /*psuedo class*/
-        border-bottom:2px orange solid;
-        font-size: 2em;
-        transition: .9s; /*Transition effet*/
-    }
-    nav a.active{
-        font-size: 3em;
-        color: red
-    }
-    main {
-        display: flex;
-        justify-content: center;
-    }
-    table{
-        margin:0px auto;
-    }
-    td{
-        padding-right: 10px;
-        font-size: 1.3em;
-    }
+    font-family: "Open Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings:
+        "wdth" 100;
+}
+header, main, nav, footer {
+    text-align:center;
+}
+nav a { /* Links within "nav" container*/
+    padding:15px;
+    padding-bottom: 4px;
+    font-size: 1.8em;
+    text-decoration: none; /*Removes underline*/
+    color: white; /*By default, links are blue*/
+}
+nav a:hover { /*psuedo class*/
+    border-bottom:2px orange solid;
+    font-size: 2em;
+    transition: .9s; /*Transition effet*/
+}
+nav a.active{
+    font-size: 3em;
+    color: red;
+}
+main {
+    display: flex;
+    justify-content: center;
+}
+table{
+    margin:0px auto;
+}
+td{
+    padding-right: 10px;
+    font-size: 1.3em;
+}
 
-    td strong{
-        color: orange;
-    }
-    #table-header {
-        background-color: #351a00;
-    }
-    .table-row{
-        background-color: #753900;
-    }
-    ul {
-        width: 500px;
-        margin: 0 auto;
-        text-align: left;
-    }
-    .hobby{
-        color:yellow;
-    }
-    footer {
-      
-        justify-content: center;
-        font-size: .8em;
-        color: green
-    }
+td strong{
+    color: orange;
+}
+#table-header {
+    background-color: #351a00;
+}
+.table-row{
+    background-color: #753900;
+}
+ul {
+    width: 500px;
+    margin: 0 auto;
+    text-align: left;
+}
+.hobby{
+    color:yellow;
+}
+footer {
+    
+    justify-content: center;
+    font-size: .8em;
+    color: green
+}
+
+h1 {
+  font-family: "Oswald", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
+
+
 
 
