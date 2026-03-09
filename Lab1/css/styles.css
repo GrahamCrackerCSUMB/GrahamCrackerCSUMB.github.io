@@ -27,6 +27,9 @@ nav a.active{
     font-weight: bold;
     color: red;
 }
+.contact-form {
+    border: 0;
+}
 main {
     display: flex;
     justify-content: center;
