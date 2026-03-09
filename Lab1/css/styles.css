@@ -1,4 +1,14 @@
 body {
     background-color: black;
     color: gray;
+    header, main, nav, footer {
+        text-align:center;
+    }
+    nav a { /* Links within "nav" container*/
+        padding:15px;
+        padding-bottom: 4px;
+        font-size: 1.8em;
+        text-decoration: none; /*Removes underline*/
+        color: white; /*By default, links are blue*/
+    }
 }
