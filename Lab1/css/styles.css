@@ -1,6 +1,7 @@
 body {
     background-color: black;
     color: gray;
+    }
     header, main, nav, footer {
         text-align:center;
     }
@@ -20,4 +21,3 @@ body {
         display: flex;
         justify-content: center;
     }
-}
