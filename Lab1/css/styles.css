@@ -11,4 +11,13 @@ body {
         text-decoration: none; /*Removes underline*/
         color: white; /*By default, links are blue*/
     }
+    nav a:hover { /*psuedo class*/
+        border-bottom:2px orange solid;
+        font-size: 2em;
+        transition: .9s; /*Transition effet*/
+    }
+    main {
+        display: flex;
+        justify-content: center;
+    }
 }
