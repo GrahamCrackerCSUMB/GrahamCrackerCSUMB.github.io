@@ -80,6 +80,7 @@ footer {
 
 #ScrumSteps li:last-child{
     font-style: italic;
+    text-align: left;
 }
 
 .scrum_quote {
@@ -98,6 +99,12 @@ h1 {
   font-optical-sizing: auto;
   font-weight: 500;
   font-style: normal;
+}
+
+.topContent {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
 }
 
 
