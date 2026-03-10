@@ -70,6 +70,9 @@ footer {
     font-style: italic;
 }
 
+#scrum_process {
+    width: 300px;
+}
 h1 {
   font-family: "Oswald", sans-serif;
   font-optical-sizing: auto;
