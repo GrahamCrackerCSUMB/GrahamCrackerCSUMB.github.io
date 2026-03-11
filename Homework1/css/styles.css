@@ -37,8 +37,7 @@ nav a.active{
 }
 
 main {
-    display: flex;
-    justify-content: center;
+    text-align: center;
 }
 
 table{
@@ -102,7 +101,7 @@ h1 {
   font-style: normal;
 }
 
-.topContent {
+.top {
     display: flex;
     justify-content: center;
     gap: 40px;
