@@ -89,6 +89,20 @@ footer {
     width: 300px;
 }
 
+#scrum_team_roles {
+    width: 300px;
+    height: auto;
+}
+
+#scrum_events {
+    width: 300px;
+    height: auto;
+}
+
+#scrum_artifacts {
+    width: 300px;
+    height: auto;
+}
 .scrum_quote {
     width: 300px;
     text-align: center;
