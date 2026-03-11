@@ -85,10 +85,12 @@ footer {
     text-align: left;
 }
 
+.scrum_text{
+    width: 300px;
+}
 
 .scrum_quote {
-    width: 60%;
-    margin: 40px auto;
+    width: 300px;
     text-align: center;
 }
 
@@ -109,7 +111,6 @@ h1 {
     align-items: center;
     justify-content: center;
     gap: 40px;
-    width: 100%;
 }
 
 .top div {
