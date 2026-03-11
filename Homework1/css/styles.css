@@ -90,8 +90,10 @@ footer {
 }
 
 #scrum_team_roles {
-    width: 300px;
+    width: 250 px;
     height: auto;
+    display: block;
+    margin: 0 auto;
 }
 
 #scrum_events {
