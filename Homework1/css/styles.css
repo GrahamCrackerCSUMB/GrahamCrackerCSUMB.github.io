@@ -78,10 +78,11 @@ footer {
     color: green
 }
 
-#ScrumSteps li:last-child{
-    font-style: italic;
+#ScrumSteps {
+    display: inline-block;
     text-align: left;
 }
+
 
 .scrum_quote {
     width: 60%;
