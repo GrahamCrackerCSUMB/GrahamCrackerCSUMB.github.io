@@ -80,6 +80,10 @@ footer {
     color: green
 }
 
+figure {
+    text-align: center;
+}
+
 #ScrumSteps {
     display: inline-block;
     text-align: left;
