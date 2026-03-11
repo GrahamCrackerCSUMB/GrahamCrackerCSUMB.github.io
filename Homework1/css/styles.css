@@ -80,8 +80,9 @@ footer {
     color: green
 }
 
-figure {
-    text-align: center;
+figure img{
+    display: block;
+    margin: 0 auto;
 }
 
 #ScrumSteps {
@@ -94,7 +95,7 @@ figure {
 }
 
 #scrum_team_roles {
-    width: 250 px;
+    width: 250px;
     height: auto;
     display: block;
     margin: 0 auto;
