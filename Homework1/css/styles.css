@@ -32,9 +32,6 @@ nav a.active{
     color: red;
 }
 
-.contact-form {
-    border: 0;
-}
 
 main {
     display: flex;
