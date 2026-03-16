@@ -1,6 +1,6 @@
 //Event listerners
     document.querySelector("#guessBtn").addEventListener("click", checkGuess);
-    document.querySelector("#restBtn").addEventListener("click", initalizeGame);
+    document.querySelector("#resetBtn").addEventListener("click", intializeGame);
 
 //Global variable
 let randomNumber = Math.floor(Math.random() * 99) + 1;
@@ -11,17 +11,19 @@ function intializeGame(){
     console.log("random number = " + randomNumber);
 
     // hide the reset button
-    document.querySelector("#resetBtn").Style.display = "none";
+    document.querySelector("#resetBtn").style.display = "none";
 
     // showing the guess button
-    document.querySelector("#guessBtn").Style.display = "inline";
+    document.querySelector("#guessBtn").style.display = "inline";
+
+    attempts =0;
 
     let playerguess = document.querySelector("#playerGuess")
     playerguess.focus(); //adding focus to the textbox
-    playerguess.valuer = ""; // clear the textbox.
+    playerguess.value = ""; // clear the textbox.
      let feedback = document.querySelector("#feedback");
      feedback.textContent = ""; //clearing feedback message
-     ocument.querySelector("#guesses").textContent = ""; //clearing 
+     document.querySelector("#Guesses").textContent = ""; //clearing 
 }
    
 function checkGuess(){
@@ -43,7 +45,7 @@ function checkGuess(){
             gameOver();
     }
     else{
-        document.querySelector("#guesses").textContent += guess + " ";
+        document.querySelector("#Guesses").textContent += guess + " ";
         if(attempts == 7) {
             feedback.textContent = "You lost!";
             feedback.style.color = "black";
@@ -54,11 +56,11 @@ function checkGuess(){
             feedback.textContent = "Guess was low!";
     }
 }
-
+}
 function gameOver(){
-    guessBtn = document.querySelector("#guessBtn");
-    resetBtn = document.querySelector("#resetBtn");
+    let guessBtn = document.querySelector("#guessBtn");
+    let resetBtn = document.querySelector("#resetBtn");
     guessBtn.style.display = "none"; //hide guess button
     resetBtn.style.display = "inline";
 }
-}
+
