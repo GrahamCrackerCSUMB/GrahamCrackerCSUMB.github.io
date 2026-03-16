@@ -5,6 +5,8 @@
 //Global variable
 let randomNumber = Math.floor(Math.random() * 99) + 1;
 let attempts = 0;
+let wins = 0;
+let losses = 0;
 
 function intializeGame(){
     randomNumber = Math.floor(Math.random() * 99) + 1;
@@ -31,7 +33,7 @@ function checkGuess(){
     console.log("player guess = " + guess);
     let feedback = document.querySelector("#feedback");
     feedback.textContent = "";
-    if(guess <1 || guess > 99){
+    if(guess < 1 || guess > 99){
         feedback.textContent = "Please enter a value between 1 and 99";
         feedback.style.color = "red";
         return;
@@ -42,13 +44,17 @@ function checkGuess(){
     if(guess ==randomNumber){
             feedback.textContent = "You guessed it! You won!";
             feedback.style.color = "darkgreen";
+            wins++;
+            document.querySelector("#wins").textContent = wins;
             gameOver();
     }
     else{
         document.querySelector("#Guesses").textContent += guess + " ";
         if(attempts == 7) {
-            feedback.textContent = "You lost!";
-            feedback.style.color = "black";
+            feedback.textContent = "You lost! The number was " + randomNumber;
+            feedback.style.color = "red";
+            losses++;
+            document.querySelector("#losses").textContent = losses;
             gameOver();
         } else if (guess > randomNumber){
             feedback.textContent = "Guess was high!";
