@@ -3,7 +3,7 @@
 
 //Event listerners
     document.querySelector("#guessBtn").addEventListener("click", checkGuess);
-    document.querySelector("#resetBtn").addEventListener("click", intializeGame);
+    document.querySelector("#resetBtn").addEventListener("click", initializeGame);
 
 //Global variable
 let randomNumber = Math.floor(Math.random() * 99) + 1;
@@ -11,7 +11,7 @@ let attempts = 0;
 let wins = 0;
 let losses = 0;
 
-function intializeGame(){
+function initializeGame(){
     randomNumber = Math.floor(Math.random() * 99) + 1;
     console.log("random number = " + randomNumber);
 
