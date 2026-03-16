@@ -1,3 +1,6 @@
+//Erin Hurley
+// Added games won and lost
+
 //Event listerners
     document.querySelector("#guessBtn").addEventListener("click", checkGuess);
     document.querySelector("#resetBtn").addEventListener("click", intializeGame);
