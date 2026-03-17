@@ -41,7 +41,8 @@ function gradeQuiz(){
     console.log("Grading quiz..");
 
     // resets validation feedback
-    document.querySelector("#validationFdbk").innerHTML = "";
+    document.querySelector("#validationFdbk").innerHTML = ""
+
 
     if (!isFormValid()) {
         return;
@@ -90,5 +91,6 @@ function gradeQuiz(){
 
 
 document.querySelector("#totalScore").innerHTML = `Total Score: ${score}`;
+document.querySelector("#totalAttempts").innerHTML = `Total Attempts: ${++attempts}`;
 
 } // gradeQuiz
