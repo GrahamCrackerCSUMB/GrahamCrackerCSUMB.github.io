@@ -2,14 +2,7 @@
 document.querySelector("button").addEventListener("click", gradeQuiz);
 
 // Global variables
-$("#totalScore").html(`Total Score: ${score}`);
 var score=0;
-// variables
-score = 0;
-
-let q1Response = document.querySelector("#q1").value.toLowerCase();
-let q2Response = document.querySelector("#q2").value;
-let q4Response = document.querySelector("input[name=q4]:checked").value;
 
 displayQ4Choices();
 
@@ -60,8 +53,11 @@ function gradeQuiz(){
 
     // variables
     let score = 0;
+
     let q1Response = document.querySelector("#q1").value.toLowerCase();
-    console.log(q1Response);
+    let q2Response = document.querySelector("#q2").value;
+    let q4Selected = document.querySelector("input[name=q4]:checked");
+    let q4Response = q4Selected ? q4Selected.value : "";
 
     // Grading question 1
     if (q1Response == "sacramento") {
@@ -95,6 +91,7 @@ function gradeQuiz(){
     } else {
         wrongAnswer(4);
     }
+
 
 document.querySelector("#totalScore").innerHTML = `Total Score: ${score}`;
 
