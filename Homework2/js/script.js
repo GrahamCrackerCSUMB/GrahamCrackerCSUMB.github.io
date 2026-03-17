@@ -3,6 +3,7 @@ document.querySelector("button").addEventListener("click", gradeQuiz);
 
 // Global variables
 var score=0;
+var attempts=0;
 
 displayQ4Choices();
 
