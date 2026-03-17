@@ -17,6 +17,8 @@ function displayQ4Choices(){
     }
 } // displayQ4Choices
 
+q4ChoicesArray=_.shuffle(q4ChoicesArray);
+
 function isFormValid(){
     let isValid = true;
 
