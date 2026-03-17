@@ -16,6 +16,13 @@ function isFormValid(){
     return isValid;
 } // isFormValid
 
+function rightAnswer(index){
+    document.querySelector(`#q${index}Feedback`).innerHTML = "Correct!";
+    document.querySelector(`#q${index}Feedback`).className = "bg-success text-white";
+    document.querySelector(`#markImg${index}`).innerHTML = "<img src='img/checkmark.png'>";
+    score += 20;
+}
+
 function gradeQuiz(){
     console.log("Grading quiz..");
 
@@ -44,16 +51,16 @@ function gradeQuiz(){
     }
 
     // Grading question 2
-if (q2Response == "mo") {
-    document.querySelector("#q2Feedback").innerHTML = "Correct!";
-    document.querySelector("#q2Feedback").className = "bg-success text-white";
-    document.querySelector("#markImg2").innerHTML = "<img src='img/checkmark.png' alt='Checkmark'>";
-    score += 20;
-} else {
-    document.querySelector("#q2Feedback").innerHTML = "Incorrect!";
-    document.querySelector("#q2Feedback").className = "bg-warning text-white";
-    document.querySelector("#markImg2").innerHTML = "<img src='img/xmark.png' alt='xmark'>";
-}
+    if (q2Response == "mo") {
+        document.querySelector("#q2Feedback").innerHTML = "Correct!";
+        document.querySelector("#q2Feedback").className = "bg-success text-white";
+        document.querySelector("#markImg2").innerHTML = "<img src='img/checkmark.png' alt='Checkmark'>";
+        score += 20;
+    } else {
+        document.querySelector("#q2Feedback").innerHTML = "Incorrect!";
+        document.querySelector("#q2Feedback").className = "bg-warning text-white";
+        document.querySelector("#markImg2").innerHTML = "<img src='img/xmark.png' alt='xmark'>";
+    }
 
 document.querySelector("#totalScore").innerHTML = `Total Score: ${score}`;
 
