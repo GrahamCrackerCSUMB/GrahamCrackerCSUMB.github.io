@@ -43,5 +43,18 @@ function gradeQuiz(){
         document.querySelector("#markImg1").innerHTML = "<img src='img/xmark.png' alt='xmark'>";
     }
 
-    document.querySelector("#totalScore").innerHTML = `Total Score: ${score}`;
+    // Grading question 2
+if (q2Response == "mo") {
+    document.querySelector("#q2Feedback").innerHTML = "Correct!";
+    document.querySelector("#q2Feedback").className = "bg-success text-white";
+    document.querySelector("#markImg2").innerHTML = "<img src='img/checkmark.png' alt='Checkmark'>";
+    score += 20;
+} else {
+    document.querySelector("#q2Feedback").innerHTML = "Incorrect!";
+    document.querySelector("#q2Feedback").className = "bg-warning text-white";
+    document.querySelector("#markImg2").innerHTML = "<img src='img/xmark.png' alt='xmark'>";
+}
+
+document.querySelector("#totalScore").innerHTML = `Total Score: ${score}`;
+
 } // gradeQuiz
