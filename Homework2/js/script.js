@@ -59,6 +59,18 @@ function gradeQuiz(){
         wrongAnswer(2);
     }
 
+    // Grading question 3
+    if (
+        document.querySelector("#Jefferson").checked &&
+        document.querySelector("#Roosevelt").checked &&
+        !document.querySelector("#Jackson").checked &&
+        !document.querySelector("#Franklin").checked
+    ) {
+        rightAnswer(3);
+    } else {
+        wrongAnswer(3);
+    }
+
 document.querySelector("#totalScore").innerHTML = `Total Score: ${score}`;
 
 } // gradeQuiz
