@@ -4,6 +4,12 @@ document.querySelector("button").addEventListener("click", gradeQuiz);
 // Global variables
 $("#totalScore").html(`Total Score: ${score}`);
 var score=0;
+// variables
+score = 0;
+
+let q1Response = document.querySelector("#q1").value.toLowerCase();
+let q2Response = document.querySelector("#q2").value;
+let q4Response = document.querySelector("input[name=q4]:checked").value;
 
 // Functions
 function isFormValid(){
@@ -69,6 +75,13 @@ function gradeQuiz(){
         rightAnswer(3);
     } else {
         wrongAnswer(3);
+    }
+
+    // Question 4
+    if (q4Response == "Rhode Island") {
+        rightAnswer(4);
+    } else {
+        wrongAnswer(4);
     }
 
 document.querySelector("#totalScore").innerHTML = `Total Score: ${score}`;
