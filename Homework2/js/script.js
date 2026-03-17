@@ -91,6 +91,7 @@ function gradeQuiz(){
 
 
 document.querySelector("#totalScore").innerHTML = `Total Score: ${score}`;
+attempts++;
 document.querySelector("#totalAttempts").innerHTML = `Total Attempts: ${++attempts}`;
-
+localStorage.setItem("total_attempts, attempts");
 } // gradeQuiz
