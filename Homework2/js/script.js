@@ -37,7 +37,7 @@ function rightAnswer(index){
     document.querySelector(`#q${index}Feedback`).innerHTML = "Correct!";
     document.querySelector(`#q${index}Feedback`).className = "bg-success text-white";
     document.querySelector(`#markImg${index}`).innerHTML = "<img src='img/checkmark.png'>";
-    score += 20;
+    score += 10;
 }
 
 function wrongAnswer(index){
@@ -96,6 +96,52 @@ function gradeQuiz(){
         rightAnswer(4);
     } else {
         wrongAnswer(4);
+    }
+    // Grading question 5
+    if (q5Response == "San Francisco") {
+        rightAnswer(5);
+    } else {
+        wrongAnswer(5);
+    }
+
+    // Grading question 6
+    if (q6Response == "wy") {
+        rightAnswer(6);
+    } else {
+        wrongAnswer(6);
+    }
+
+    // Grading question 7
+    if (
+        document.querySelector("#Maine").checked &&
+        document.querySelector("#Vermont").checked &&
+        document.querySelector("#Massachusetts").checked &&
+        !document.querySelector("#Virginia").checked
+    ) {
+        rightAnswer(7);
+    } else {
+        wrongAnswer(7);
+    }
+
+    // Question 8
+    if (q4Response == "Death Valley") {
+        rightAnswer(8);
+    } else {
+        wrongAnswer(8);
+    }
+
+    // Grading question 9
+    if (q1Response == "Pierre") {
+        rightAnswer(9);
+    } else {
+        wrongAnswer(9);
+    }
+
+    // Grading question 10
+    if (q2Response == "wi") {
+        rightAnswer(10);
+    } else {
+        wrongAnswer(10);
     }
 
     if (score >= 80) {
