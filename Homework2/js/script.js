@@ -133,10 +133,10 @@ function gradeQuiz(){
 
     // Grading question 7
     if (
-        document.querySelector("#Maine").checked &&
+        !document.querySelector("#Texas").checked &&
         document.querySelector("#Vermont").checked &&
-        document.querySelector("#Massachusetts").checked &&
-        !document.querySelector("#Virginia").checked
+        !document.querySelector("#Virginia").checked &&
+        document.querySelector("#Massachusetts").checked
     ) {
         rightAnswer(7);
     } else {
