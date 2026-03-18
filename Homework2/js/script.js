@@ -7,6 +7,7 @@ var attempts= localStorage.getItem("total_attempts");
 attempts = parseInt(attempts) || 0;
 
 displayQ4Choices();
+displayQ8Choices();
 
 // Functions
 function displayQ4Choices() {
@@ -26,7 +27,7 @@ function displayQ8Choices() {
     let q8ChoicesArray = ["Death Valley", "Gulf of Mexico", "New Orleans", "Lake Erie"];
     q8ChoicesArray = _.shuffle(q8ChoicesArray);
 
-    document.querySelector("#q4Choices").innerHTML = "";
+    document.querySelector("#q8Choices").innerHTML = "";
 
     for (let i = 0; i < q8ChoicesArray.length; i++) {
         document.querySelector("#q8Choices").innerHTML +=
