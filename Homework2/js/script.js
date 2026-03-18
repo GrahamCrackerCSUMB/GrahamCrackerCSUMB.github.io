@@ -49,7 +49,7 @@ function gradeQuiz(){
     }
 
     // variables
-    let score = 0;
+    score = 0;
 
     let q1Response = document.querySelector("#q1").value.toLowerCase();
     let q2Response = document.querySelector("#q2").value;
