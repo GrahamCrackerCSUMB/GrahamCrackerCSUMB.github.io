@@ -117,7 +117,7 @@ function gradeQuiz(){
         wrongAnswer(4);
     }
     // Grading question 5
-    if (q5Response == "San Francisco") {
+    if (q5Response == "san francisco") {
         rightAnswer(5);
     } else {
         wrongAnswer(5);
@@ -143,14 +143,14 @@ function gradeQuiz(){
     }
 
     // Question 8
-    if (q8Response == "Death Valley") {
+    if (q8Response == "death valley") {
         rightAnswer(8);
     } else {
         wrongAnswer(8);
     }
 
     // Grading question 9
-    if (q9Response == "Pierre") {
+    if (q9Response == "pierre") {
         rightAnswer(9);
     } else {
         wrongAnswer(9);
