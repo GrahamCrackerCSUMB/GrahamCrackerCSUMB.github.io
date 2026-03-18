@@ -100,6 +100,6 @@ function gradeQuiz(){
 
 
 document.querySelector("#totalScore").innerHTML = `Total Score: ${score}`;
-document.querySelector("#totalAttempts").innerHTML = `Total Attempts: ${attempts}`;
+document.querySelector("#totalAttempts").innerHTML = `Total Attempts: ${++attempts}`;
 localStorage.setItem("total_attempts", attempts);
 } // gradeQuiz
