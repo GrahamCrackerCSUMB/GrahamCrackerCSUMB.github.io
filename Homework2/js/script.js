@@ -4,6 +4,7 @@ document.querySelector("button").addEventListener("click", gradeQuiz);
 // Global variables
 var score=0;
 var attempts= localStorage.getItem("total_attempts");
+attempts = parseInt(attempts) || 0;
 
 displayQ4Choices();
 
@@ -100,6 +101,5 @@ function gradeQuiz(){
 
 document.querySelector("#totalScore").innerHTML = `Total Score: ${score}`;
 document.querySelector("#totalAttempts").innerHTML = `Total Attempts: ${attempts}`;
-$("#totalAttempts").html(`Total Attempts: ${++attempts}`);
 localStorage.setItem("total_attempts", attempts);
 } // gradeQuiz
