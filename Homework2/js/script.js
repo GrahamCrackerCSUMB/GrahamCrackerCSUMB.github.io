@@ -22,6 +22,19 @@ function displayQ4Choices() {
     }
 }
 
+function displayQ8Choices() {
+    let q4ChoicesArray = ["Death Valley", "Gulf of Mexico", "New Orleans", "Lake Erie"];
+    q4ChoicesArray = _.shuffle(q8ChoicesArray);
+
+    document.querySelector("#q4Choices").innerHTML = "";
+
+    for (let i = 0; i < q4ChoicesArray.length; i++) {
+        document.querySelector("#q8Choices").innerHTML +=
+            `<input type="radio" name="q8" id="${q8ChoicesArray[i]}" value="${q8ChoicesArray[i]}">
+             <label for="${q8ChoicesArray[i]}">${q8ChoicesArray[i]}</label><br>`;
+    }
+}
+
 function isFormValid(){
     let isValid = true;
 
