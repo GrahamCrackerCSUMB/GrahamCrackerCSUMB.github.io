@@ -98,8 +98,19 @@ function gradeQuiz(){
         wrongAnswer(4);
     }
 
+    if (score >= 80) {
+    document.querySelector("#highScore").innerHTML = "Great job! You scored above 80!";
+    } else {
+        document.querySelector("#highScore").innerHTML = "";
+    }
+
 
 document.querySelector("#totalScore").innerHTML = `Total Score: ${score}`;
+if (score < 80) {
+    document.querySelector("#totalScore").className = "text-danger";
+} else {
+    document.querySelector("#totalScore").className = "text-success";
+}
 document.querySelector("#totalAttempts").innerHTML = `Total Attempts: ${++attempts}`;
 localStorage.setItem("total_attempts", attempts);
 } // gradeQuiz
