@@ -124,21 +124,21 @@ function gradeQuiz(){
     }
 
     // Question 8
-    if (q4Response == "Death Valley") {
+    if (q8Response == "Death Valley") {
         rightAnswer(8);
     } else {
         wrongAnswer(8);
     }
 
     // Grading question 9
-    if (q1Response == "Pierre") {
+    if (q9Response == "Pierre") {
         rightAnswer(9);
     } else {
         wrongAnswer(9);
     }
 
     // Grading question 10
-    if (q2Response == "wi") {
+    if (q10Response == "wi") {
         rightAnswer(10);
     } else {
         wrongAnswer(10);
