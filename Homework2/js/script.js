@@ -77,6 +77,12 @@ function gradeQuiz(){
     let q2Response = document.querySelector("#q2").value;
     let q4Selected = document.querySelector("input[name=q4]:checked");
     let q4Response = q4Selected ? q4Selected.value : "";
+    let q5Response = document.querySelector("#q5").value.toLowerCase();
+    let q6Response = document.querySelector("#q6").value;
+    let q8Selected = document.querySelector("input[name=q8]:checked");
+    let q8Response = q8Selected ? q8Selected.value : "";
+    let q9Response = document.querySelector("#q9").value.toLowerCase();
+    let q10Response = document.querySelector("#q10").value;
 
     // Grading question 1
     if (q1Response == "sacramento") {
