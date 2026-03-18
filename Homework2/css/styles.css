@@ -1,3 +1,10 @@
 header h1 {
     font-family: 'Merriweather', serif;
 }
+
+body {
+    background-image: url("../img/books.jpg");
+    background-size: cover;      
+    background-repeat: no-repeat;  
+    background-position: center;  
+}
