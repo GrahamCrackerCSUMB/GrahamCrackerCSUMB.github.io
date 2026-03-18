@@ -106,11 +106,11 @@ function gradeQuiz(){
 
 
 document.querySelector("#totalScore").innerHTML = `Total Score: ${score}`;
-if (score < 80) {
-    document.querySelector("#totalScore").className = "text-danger";
-} else {
-    document.querySelector("#totalScore").className = "text-success";
-}
+    if (score < 80) {
+        document.querySelector("#totalScore").className = "text-danger";
+    } else {
+        document.querySelector("#totalScore").className = "text-success";
+    }
 document.querySelector("#totalAttempts").innerHTML = `Total Attempts: ${++attempts}`;
 localStorage.setItem("total_attempts", attempts);
 } // gradeQuiz
