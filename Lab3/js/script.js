@@ -37,7 +37,7 @@ async function displayCity() {
         document.querySelector("#latitude").innerHTML = data.latitude;
     }
 }
-}
+
 
 //Displaying counties from Web API based on the two-letter abbreviation of a state
 async function displayCounties() {
