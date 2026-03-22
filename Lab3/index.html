@@ -8,33 +8,65 @@
     <h1> Sign Up </h1>
 
     <form id="signupForm" action="welcome.html">
-     First Name:<input type="text" name="fName"><br>
-     Last Name: <input type="text" name="lName"><br>
-     Gender:    
-         <input type="radio" name="gender" value="m">Male<br>
-         <input type="radio" name="gender" value="f">Female<br>	
-      Zip Code:  <input type="text" id="zip" name="zip"><br>
-      <span id="zipcodeError"></span><br>
-      City:   <span id="city"></span> <br>
-       Latitude: <span id="latitude"></span><br>
-       Longitude: <span id="longitude"></span><br>
+    <div id="formBox">
 
-      State: <select id="state" name="state"></select> <br>
+        <div class="sectionBox">
+            <h2>Personal Info</h2>
 
+            <label>First Name:</label>
+            <input type="text" name="fName"><br>
 
-       Select a County: <select id="county"></select><br>
+            <label>Last Name:</label>
+            <input type="text" name="lName"><br>
 
-       Desired Username: 
-       <input type="text" id="username" name="username"><br><br>
-       <span id="usernameError"></span><br>
+            <label>Gender:</label>
+            <input type="radio" name="gender" value="m"> Male
+            <input type="radio" name="gender" value="f"> Female
+        </div>
 
+        <div class="sectionBox">
+            <h2>Location Info</h2>
 
-        Password: <input type="password" name="password" id="password"><span id="suggestedPwd"></span> <br>
-        Type Password Again: <input type="password" name="passwordCheck" id="passwordCheck"><br>
-        
-        <span id="passwordError"></span> 
+            <label>Zip Code:</label>
+            <input type="text" id="zip" name="zip">
+            <span id="zipcodeError"></span><br>
 
-         <input type="submit" value="Sign up!">
+            <label>City:</label>
+            <span id="city"></span><br>
+
+            <label>Latitude:</label>
+            <span id="latitude"></span><br>
+
+            <label>Longitude:</label>
+            <span id="longitude"></span><br>
+
+            <label>State:</label>
+            <select id="state" name="state"></select><br>
+
+            <label>Select a County:</label>
+            <select id="county"></select>
+        </div>
+
+        <div class="sectionBox">
+            <h2>Account Info</h2>
+
+            <label>Desired Username:</label>
+            <input type="text" id="username" name="username"><br>
+            <span id="usernameError"></span><br>
+
+            <label>Password:</label>
+            <input type="password" name="password" id="password">
+            <span id="suggestedPwd"></span><br>
+
+            <label>Type Password Again:</label>
+            <input type="password" name="passwordCheck" id="passwordCheck"><br>
+
+            <span id="passwordError"></span><br><br>
+
+            <input type="submit" value="Sign up!">
+        </div>
+
+    </div>
 </form>
 
          <script src="js/script.js"></script>
