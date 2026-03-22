@@ -116,6 +116,6 @@ async function displayStates() {
     stateList.innerHTML = "<option value=''>Select One</option>";
 
     for (let i = 0; i < data.length; i++) {
-        stateList.innerHTML += `<option value="${data[i].usps}">${data[i].state}</option>`;
+        stateList.innerHTML += `<option value="${data[i].usps}">${data[i].name}</option>`;
     }
 }
