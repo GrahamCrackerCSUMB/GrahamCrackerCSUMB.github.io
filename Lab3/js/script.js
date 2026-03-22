@@ -2,6 +2,9 @@
 document.querySelector("#zip").addEventListener("change", displayCity);
 document.querySelector("#state").addEventListener("change", displayCounties);
 document.querySelector("#username").addEventListener("change", checkUsername);
+document.querySelector("#signupForm").addEventListener("submit", function(event) {
+    validateFrom(event);
+});
 
 
 //functions
@@ -52,4 +55,8 @@ async function checkUsername() {
         usernameError.innerHTML = "Username taken";
         usernameError.style.color = "red";
     }
+}
+
+function validateFrom(e){
+    e.preventDefault();
 }
