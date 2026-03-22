@@ -28,6 +28,7 @@ async function displayCounties() {
     let data = await response.json();
 
     let countyList = document.querySelector("#county");
+    countyList.innerHTML = "<option> Select County </option>";
 
     for (let i = 0; i < data.length; i++) {
         countyList.innerHTML += `<option> ${data[i].county} </option>`;
