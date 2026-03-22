@@ -62,9 +62,24 @@ function validateForm(e) {
     let isValid = true;
 
     let username = document.querySelector("#username").value;
+    let password = document.querySelector("#password").value;
+    let passwordCheck = document.querySelector("#passwordCheck").value;
+
+    document.querySelector("#usernameError").innerHTML = "";
+    document.querySelector("#passwordError").innerHTML = "";
 
     if (username.length == 0) {
         document.querySelector("#usernameError").innerHTML = "Username Required!";
+        isValid = false;
+    }
+    
+     if (password.length < 6) {
+        document.querySelector("#passwordError").innerHTML = "Password must be at least 6 characters!";
+        isValid = false;
+    }
+
+    if (password != passwordCheck) {
+        document.querySelector("#passwordError").innerHTML = "Passwords must match!";
         isValid = false;
     }
 
