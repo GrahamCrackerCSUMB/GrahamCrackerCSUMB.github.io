@@ -23,8 +23,8 @@ async function displayCity() {
     document.querySelector("#zipcodeError").innerHTML = "";
 
     if (!data || !data.city) {
-        document.querySelector("#zipError").innerHTML = "Zip code not found";
-        document.querySelector("#zipError").style.color = "red";
+        document.querySelector("#zipcodeError").innerHTML = "Zip code not found";
+        document.querySelector("#zipcodeError").style.color = "red";
         document.querySelector("#city").innerHTML = "";
         document.querySelector("#longitude").innerHTML = "";
         document.querySelector("#latitude").innerHTML = "";
