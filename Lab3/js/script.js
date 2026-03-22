@@ -7,6 +7,7 @@ document.querySelector("#signupForm").addEventListener("submit", function(event)
     validateForm(event);
 });
 
+displayStates();
 
 //functions
 
@@ -104,4 +105,17 @@ function validateForm(e) {
 function displaySuggestedPassword() {
     let suggestedPassword = "Password1";
     document.querySelector("#suggestedPwd").innerHTML = " Suggested password: " + suggestedPassword;
+}
+
+async function displayStates() {
+    let url = "https://csumb.space/api/allStatesAPI.php";
+    let response = await fetch(url);
+    let data = await response.json();
+
+    let stateList = document.querySelector("#state");
+    stateList.innerHTML = "<option value=''>Select One</option>";
+
+    for (let i = 0; i < data.length; i++) {
+        stateList.innerHTML += `<option value="${data[i].usps}">${data[i].state}</option>`;
+    }
 }
