@@ -15,4 +15,6 @@ async function displayCity() {
     let data = await response.json();
     //console.log(data);
     document.querySelector("#city").innerHTML = data.city;
+    document.querySelector("#longitude").innerHTML = data.longitude;
+    document.querySelector("#latitude").innerHTML = data.latitude;
 }
