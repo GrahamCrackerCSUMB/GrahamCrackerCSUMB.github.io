@@ -22,6 +22,21 @@ async function displayCity() {
     document.querySelector("#city").innerHTML = data.city;
     document.querySelector("#longitude").innerHTML = data.longitude;
     document.querySelector("#latitude").innerHTML = data.latitude;
+
+    document.querySelector("#zipError").innerHTML = "";
+
+    if (!data || !data.city) {
+        document.querySelector("#zipError").innerHTML = "Zip code not found";
+        document.querySelector("#zipError").style.color = "red";
+        document.querySelector("#city").innerHTML = "";
+        document.querySelector("#longitude").innerHTML = "";
+        document.querySelector("#latitude").innerHTML = "";
+    } else {
+        document.querySelector("#city").innerHTML = data.city;
+        document.querySelector("#longitude").innerHTML = data.longitude;
+        document.querySelector("#latitude").innerHTML = data.latitude;
+    }
+}
 }
 
 //Displaying counties from Web API based on the two-letter abbreviation of a state
@@ -72,7 +87,7 @@ function validateForm(e) {
         document.querySelector("#usernameError").innerHTML = "Username Required!";
         isValid = false;
     }
-    
+
      if (password.length < 6) {
         document.querySelector("#passwordError").innerHTML = "Password must be at least 6 characters!";
         isValid = false;
