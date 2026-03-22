@@ -1,4 +1,5 @@
 //event listeners
+document.querySelector("#password").addEventListener("click", displaySuggestedPassword);
 document.querySelector("#zip").addEventListener("change", displayCity);
 document.querySelector("#state").addEventListener("change", displayCounties);
 document.querySelector("#username").addEventListener("change", checkUsername);
@@ -98,4 +99,9 @@ function validateForm(e) {
     if (!isValid) {
         e.preventDefault();
     }
+}
+
+function displaySuggestedPassword() {
+    let suggestedPassword = "Password1";
+    document.querySelector("#suggestedPwd").innerHTML = " Suggested password: " + suggestedPassword;
 }
