@@ -19,11 +19,8 @@ async function displayCity() {
     let response = await fetch(url);
     let data = await response.json();
     //console.log(data);
-    document.querySelector("#city").innerHTML = data.city;
-    document.querySelector("#longitude").innerHTML = data.longitude;
-    document.querySelector("#latitude").innerHTML = data.latitude;
-
-    document.querySelector("#zipError").innerHTML = "";
+    
+    document.querySelector("#zipcodeError").innerHTML = "";
 
     if (!data || !data.city) {
         document.querySelector("#zipError").innerHTML = "Zip code not found";
