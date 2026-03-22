@@ -79,3 +79,18 @@ input[type="submit"]:hover {
     margin-left: 10px;
     font-size: 0.95em;
 }
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f4f4f4;
+
+    display: flex;
+    justify-content: center;   /* horizontal center */
+    align-items: center;       /* vertical center */
+    height: 100vh;             /* full screen height */
+    margin: 0;
+}
+
+#formBox {
+    width: 900px;              /* or whatever looks good */
+}
