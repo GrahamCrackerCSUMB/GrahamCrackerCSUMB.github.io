@@ -57,6 +57,18 @@ async function checkUsername() {
     }
 }
 
-function validateFrom(e){
-    e.preventDefault();
+// Validating form data
+function validateForm(e) {
+    let isValid = true;
+
+    let username = document.querySelector("#username").value;
+
+    if (username.length == 0) {
+        document.querySelector("#usernameError").innerHTML = "Username Required!";
+        isValid = false;
+    }
+
+    if (!isValid) {
+        e.preventDefault();
+    }
 }
