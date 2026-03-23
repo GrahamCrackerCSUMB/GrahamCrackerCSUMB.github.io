@@ -2,13 +2,20 @@
 document.querySelector("#password").addEventListener("click", displaySuggestedPassword);
 document.querySelector("#zip").addEventListener("change", displayCity);
 document.querySelector("#state").addEventListener("change", displayCounties);
-document.querySelector("#username").addEventListener("change", checkUsername);
-document.querySelector("#signupForm").addEventListener("submit", function(event) {
-    validateForm(event);
+document.querySelector("#username").addEventListener("input", checkUsername);
+
+document.querySelector("#signupForm").addEventListener("submit", async function(event) {
+    event.preventDefault();
+
+    let isValid = await validateForm();
+
+    if (isValid) {
+        document.querySelector("#signupForm").submit();
+    }
 });
 
-
 displayStates();
+
 let isUsernameAvailable = false;
 
 //functions
@@ -58,6 +65,17 @@ async function displayCounties() {
 // checking whether the username is available
 async function checkUsername() {
     let username = document.querySelector("#username").value;
+    let usernameError = document.querySelector("#usernameError");
+
+    if (username.length == 0) {
+        usernameError.innerHTML = "Username Required!";
+        usernameError.style.color = "red";
+        isUsernameAvailable = false;
+        return false;
+    }
+
+
+
     let url = `https://csumb.space/api/usernamesAPI.php?username=${username}`;
     let response = await fetch(url);
     let data = await response.json();
@@ -68,15 +86,17 @@ async function checkUsername() {
         usernameError.innerHTML = "Username available!";
         usernameError.style.color = "green";
         isUsernameAvailable = true;
+        return true;
     } else {
         usernameError.innerHTML = "Username taken";
         usernameError.style.color = "red";
         isUsernameAvailable = false;
+        return false;
     }
 }
 
 // Validating form data
-function validateForm(e) {
+async function validateForm(e) {
     let isValid = true;
 
     let username = document.querySelector("#username").value;
@@ -88,12 +108,13 @@ function validateForm(e) {
 
     if (username.length == 0) {
         document.querySelector("#usernameError").innerHTML = "Username Required!";
+        document.querySelector("#usernameError").style.color = "red";
         isValid = false;
-    }
-    
-    if (!isUsernameAvailable) {
-        document.querySelector("#usernameError").innerHTML = "Username must be available!";
-        isValid = false;
+    } else {
+        let available = await checkUsername();
+        if (!available) {
+            isValid = false;
+        }
     }
 
     if (password.length < 6) {
@@ -106,9 +127,7 @@ function validateForm(e) {
         isValid = false;
     }
 
-    if (!isValid) {
-        e.preventDefault();
-    }
+    return isValid;
 }
 
 function displaySuggestedPassword() {
