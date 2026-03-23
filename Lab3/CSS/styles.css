@@ -18,6 +18,10 @@ h1 {
     border-radius: 12px;
     padding: 25px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
 }
 
 .sectionBox {
@@ -25,7 +29,6 @@ h1 {
     border: 1px solid #cccccc;
     border-radius: 10px;
     padding: 20px;
-    margin-bottom: 20px;
 }
 
 .sectionBox h2 {
@@ -33,29 +36,45 @@ h1 {
     margin-bottom: 15px;
     font-size: 1.3em;
     color: #333333;
+    text-align: center;
 }
 
 label {
-    display: inline-block;
-    width: 160px;
-    margin-bottom: 10px;
+    display: block;
+    margin-bottom: 5px;
     font-weight: bold;
 }
 
 input[type="text"],
 input[type="password"],
 select {
-    width: 250px;
+    width: 100%;
     padding: 8px;
-    margin-bottom: 10px;
+    margin-bottom: 12px;
     border: 1px solid #999999;
     border-radius: 5px;
     font-size: 1em;
+    box-sizing: border-box;
+}
+
+.gender-group {
+    margin-bottom: 12px;
+}
+
+.gender-group label {
+    display: inline;
+    margin-right: 10px;
+    font-weight: normal;
 }
 
 input[type="radio"] {
-    margin-left: 5px;
     margin-right: 5px;
+}
+
+.button-row {
+    grid-column: 1 / -1;
+    text-align: center;
+    margin-top: 10px;
 }
 
 input[type="submit"] {
@@ -76,21 +95,14 @@ input[type="submit"]:hover {
 #usernameError,
 #passwordError,
 #suggestedPwd {
-    margin-left: 10px;
+    display: block;
+    margin-top: 4px;
     font-size: 0.95em;
+    color: red;
 }
 
-body {
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: #f4f4f4;
-
-    display: flex;
-    justify-content: center;   /* horizontal center */
-    align-items: center;       /* vertical center */
-    height: 100vh;             /* full screen height */
-    margin: 0;
-}
-
-#formBox {
-    width: 900px;              /* or whatever looks good */
+@media (max-width: 900px) {
+    #formBox {
+        grid-template-columns: 1fr;
+    }
 }
