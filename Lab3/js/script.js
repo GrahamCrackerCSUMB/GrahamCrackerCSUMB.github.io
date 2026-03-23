@@ -8,7 +8,6 @@ document.querySelector("#signupForm").addEventListener("submit", function(event)
 });
 
 displayStates();
-console.log(data);
 
 //functions
 
@@ -112,6 +111,8 @@ async function displayStates() {
     let url = "https://csumb.space/api/allStatesAPI.php";
     let response = await fetch(url);
     let data = await response.json();
+
+    console.log(data);
 
     let stateList = document.querySelector("#state");
     stateList.innerHTML = "<option value=''>Select One</option>";
