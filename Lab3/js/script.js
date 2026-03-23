@@ -7,7 +7,9 @@ document.querySelector("#signupForm").addEventListener("submit", function(event)
     validateForm(event);
 });
 
+
 displayStates();
+let isUsernameAvailable = false;
 
 //functions
 
@@ -65,9 +67,11 @@ async function checkUsername() {
     if (data.available) {
         usernameError.innerHTML = "Username available!";
         usernameError.style.color = "green";
+        isUsernameAvailable = true;
     } else {
         usernameError.innerHTML = "Username taken";
         usernameError.style.color = "red";
+        isUsernameAvailable = false;
     }
 }
 
@@ -86,8 +90,13 @@ function validateForm(e) {
         document.querySelector("#usernameError").innerHTML = "Username Required!";
         isValid = false;
     }
+    
+    if (!isUsernameAvailable) {
+        document.querySelector("#usernameError").innerHTML = "Username must be available!";
+        isValid = false;
+    }
 
-     if (password.length < 6) {
+    if (password.length < 6) {
         document.querySelector("#passwordError").innerHTML = "Password must be at least 6 characters!";
         isValid = false;
     }
