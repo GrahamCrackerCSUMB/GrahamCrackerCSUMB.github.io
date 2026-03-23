@@ -21,9 +21,10 @@
             <input type="text" name="lName"><br>
 
             <label>Gender:</label>
-            <input type="radio" name="gender" value="m"> Male
-            <input type="radio" name="gender" value="f"> Female
-        </div>
+            <div class="gender-group">
+                <input type="radio" name="gender" value="m"> Male
+                <input type="radio" name="gender" value="f"> Female
+            </div>
 
         <div class="sectionBox">
             <h2>Location Info</h2>
@@ -63,7 +64,9 @@
             <input type="password" name="passwordCheck" id="passwordCheck"><br>
 
             <span id="passwordError"></span><br><br>
+        </div>
 
+        <div class="button-row">
             <input type="submit" value="Sign up!">
         </div>
 
