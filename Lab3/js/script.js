@@ -8,6 +8,7 @@ document.querySelector("#signupForm").addEventListener("submit", function(event)
 });
 
 displayStates();
+console.log(data);
 
 //functions
 
