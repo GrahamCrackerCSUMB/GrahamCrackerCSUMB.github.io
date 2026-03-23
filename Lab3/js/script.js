@@ -80,8 +80,6 @@ async function checkUsername() {
     let response = await fetch(url);
     let data = await response.json();
 
-    let usernameError = document.querySelector("#usernameError");
-
     if (data.available) {
         usernameError.innerHTML = "Username available!";
         usernameError.style.color = "green";
