@@ -1,7 +1,6 @@
 body {
     font-family: Arial, Helvetica, sans-serif;
     background-color: #f4f4f4;
-    margin: 0;
     padding: 30px;
 }
 
@@ -12,21 +11,16 @@ h1 {
 
 #formBox {
     max-width: 1000px;
-    margin: 0 auto;
     background-color: #ffffff;
     border: 2px solid #cccccc;
     border-radius: 12px;
     padding: 25px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
     gap: 20px;
 }
 
 .sectionBox {
     background-color: #f9f9f9;
-    border: 1px solid #cccccc;
+    border: 1px solid #0b0202;
     border-radius: 10px;
     padding: 20px;
 }
