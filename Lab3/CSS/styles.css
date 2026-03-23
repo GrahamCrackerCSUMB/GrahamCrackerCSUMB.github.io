@@ -26,8 +26,8 @@ h1 {
 
 
 .sectionBox {
-    background-color: #2d7d8a; 
-    border: 1px solid #2d7d8a;
+    background-color: #f8dede; 
+    border: 1px solid #f8dede;
     border-radius: 10px;
     padding: 20px;
     color: white;
@@ -65,7 +65,7 @@ select {
 }
 
 input[type="submit"] {
-    background-color: #2d7d8a; 
+    background-color: #f8dede; 
     color: white;
     border: none;
     padding: 10px 18px;
@@ -74,7 +74,7 @@ input[type="submit"] {
 }
 
 input[type="submit"]:hover {
-    background-color: #245f68;
+    background-color: #f83232;
 }
 
 #zipcodeError,
