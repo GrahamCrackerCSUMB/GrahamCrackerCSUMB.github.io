@@ -36,6 +36,30 @@ async function getCoordinates() {
             "<p><strong>Longitude:</strong> " + lon + "</p>" +
             "<p><strong>Temperature:</strong> " + temp + " °F</p>";
 
+
+        const image = document.getElementById("weatherImage");
+
+        let imagePath = "";
+
+        if (temp < 0) {
+            imagePath = "img/below0.jpeg";
+        } else if (temp < 30) {
+            imagePath = "img/below30.jpeg";
+        } else if (temp < 50) {
+            imagePath = "img/below50.jpg";
+        } else if (temp < 70) {
+            imagePath = "img/below70.jpg";
+        } else if (temp < 80) {
+            imagePath = "img/below80.jpg";
+        } else if (temp < 90) {
+            imagePath = "img/below90.jpeg";
+        } else if (temp < 100) {
+            imagePath = "img/below100.jpeg";
+        } else {
+            imagePath = "img/over100.jpeg";
+        }
+
+image.src = imagePath;
     } catch (error) {
         result.innerHTML = "<p class='error'>Error!</p>";
     }
