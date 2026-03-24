@@ -20,6 +20,10 @@ async function getWeather() {
         }
 
         result.innerHTML =
-            "<p><strong>Weather:</strong> " + data.current.weather_descriptions[0];
-        }
+
+            "<p><strong>Weather:</strong> " + data.current.weather_descriptions[0] + "</p>";
+
+    } catch (error) {
+        result.innerHTML = "<p class='error'>Something went wrong.</p>";
+    }
 }
