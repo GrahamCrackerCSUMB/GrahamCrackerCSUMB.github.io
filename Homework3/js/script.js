@@ -32,8 +32,6 @@ async function getCoordinates() {
 
         result.innerHTML =
             "<h3>" + location.name + ", " + location.admin1 + "</h3>" +
-            "<p><strong>Latitude:</strong> " + lat + "</p>" +
-            "<p><strong>Longitude:</strong> " + lon + "</p>" +
             "<p><strong>Temperature:</strong> " + temp + " °F</p>";
 
 
