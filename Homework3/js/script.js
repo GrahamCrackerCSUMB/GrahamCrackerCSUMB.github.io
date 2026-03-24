@@ -1,4 +1,4 @@
-async function getWeather() {
+async function getCoordinates() {
     const zip = document.getElementById("zipCode").value;
     const result = document.getElementById("result");
 
@@ -7,10 +7,10 @@ async function getWeather() {
         return;
     }
 
-    const apiKey = "1bc2dd74a57903d4331aa36418f71b41";
-    const url = "http://api.weatherstack.com/current?access_key=" + apiKey + "&query=" + zip + "&units=f";
+    
 
     try {
+        const url = "https://geocoding-api.open-meteo.com/v1/search?name="  + zip;
         const response = await fetch(url);
         const data = await response.json();
 
@@ -19,11 +19,14 @@ async function getWeather() {
             return;
         }
 
-        result.innerHTML =
+        const location = data.results[0];
 
-            "<p><strong>Weather:</strong> " + data.current.weather_descriptions[0] + "</p>";
+        result.innerHTML =
+            "<h3>" + location.name + ", " + location.admin1 + "</h3>" +
+            "<p><strong>Latitude:</strong> " + location.latitude + "</p>" +
+            "<p><strong>Longitude:</strong> " + location.longitude + "</p>";
 
     } catch (error) {
-        result.innerHTML = "<p class='error'>Something went wrong.</p>";
+        result.innerHTML = "<p class='error'>Error!</p>";
     }
 }
