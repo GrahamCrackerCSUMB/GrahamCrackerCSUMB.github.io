@@ -28,14 +28,6 @@ async function getCoordinates() {
         const weatherResponse = await fetch(weatherUrl);
         const weatherData = await weatherResponse.json();
         const temp = weatherData.current_weather.temperature;
-
-
-        result.innerHTML =
-            "<h3>" + location.name + ", " + location.admin1 + "</h3>" +
-            "<p><strong>Temperature:</strong> " + temp + " °F</p>";
-            "<p><strong>Advice:</strong> " + message + "</p>";
-
-
         const image = document.getElementById("weatherImage");
 
         let imagePath = "";
@@ -66,6 +58,11 @@ async function getCoordinates() {
             message = "You need sunprotective layers or you'll burn!";
             imagePath = "img/over100.jpeg";
         }
+
+        result.innerHTML =
+            "<h3>" + location.name + ", " + location.admin1 + "</h3>" +
+            "<p><strong>Temperature:</strong> " + temp + " °F</p>"
+            "<p><strong>Advice:</strong> " + message + "</p>";
 
         image.src = imagePath;
         image.style.display = "block";
