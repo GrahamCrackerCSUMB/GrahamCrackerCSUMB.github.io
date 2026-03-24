@@ -23,7 +23,7 @@ async function getCoordinates() {
         const lat = location.latitude;
         const lon = location.longitude;
 
-        const weatherUrl = "https://api.open-meteo.com/v1/forecast?latitude=" + lat + "&longitude=" + lon + "&current_weather=true";
+        const weatherUrl = "https://api.open-meteo.com/v1/forecast?latitude=" + lat + "&longitude=" + lon + "&current_weather=true&temperature_unit=fahrenheit";
 
         const weatherResponse = await fetch(weatherUrl);
         const weatherData = await weatherResponse.json();
