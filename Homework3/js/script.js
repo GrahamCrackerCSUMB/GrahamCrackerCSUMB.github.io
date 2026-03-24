@@ -8,7 +8,7 @@ async function getWeather() {
     }
 
     const apiKey = "1bc2dd74a57903d4331aa36418f71b41";
-    const url = "https://api.weatherstack.com/current?access_key=" + apiKey + "&query=" + zip + "&units=f";
+    const url = "http://api.weatherstack.com/current?access_key=" + apiKey + "&query=" + zip + "&units=f";
 
     try {
         const response = await fetch(url);
