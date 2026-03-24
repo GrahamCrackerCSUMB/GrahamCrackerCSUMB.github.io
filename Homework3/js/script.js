@@ -59,7 +59,9 @@ async function getCoordinates() {
             imagePath = "img/over100.jpeg";
         }
 
-image.src = imagePath;
+        image.src = imagePath;
+        image.style.display = "block";
+
     } catch (error) {
         result.innerHTML = "<p class='error'>Error!</p>";
     }
