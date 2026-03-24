@@ -1,3 +1,9 @@
+document.getElementById("zipCode").addEventListener("keypress", function(event) {
+    if (event.key === "Enter") {
+        getCoordinates();
+    }
+});
+
 async function getCoordinates() {
     const zip = document.getElementById("zipCode").value;
     const result = document.getElementById("result");
@@ -7,7 +13,11 @@ async function getCoordinates() {
         return;
     }
 
-    
+    if (zip.length !== 5) {
+    result.innerHTML = "<p class='error'>ZIP must be 5 digits.</p>";
+    return;
+    }
+
 
     try {
         const url = "https://geocoding-api.open-meteo.com/v1/search?name="  + zip;
