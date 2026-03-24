@@ -49,7 +49,7 @@ async function getCoordinates() {
             message = "No sweater needed, enjoy the sunshine!";
             imagePath = "img/below80.jpg";
         } else if (temp < 90) {
-            message = "No sweater, but you better be wearing suncreen.";
+            message = "No sweater, but you better be wearing sunscreen.";
             imagePath = "img/below90.jpeg";
         } else if (temp < 100) {
             message = "Forget the sweater, pack the sunglasses and some cold drinks.";
@@ -61,7 +61,7 @@ async function getCoordinates() {
 
         result.innerHTML =
             "<h3>" + location.name + ", " + location.admin1 + "</h3>" +
-            "<p><strong>Temperature:</strong> " + temp + " °F</p>"
+            "<p><strong>Temperature:</strong> " + temp + " °F</p>" +
             "<p><strong>Advice:</strong> " + message + "</p>";
 
         image.src = imagePath;
