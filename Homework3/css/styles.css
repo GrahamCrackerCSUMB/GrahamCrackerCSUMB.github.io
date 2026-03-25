@@ -1,7 +1,7 @@
 #weatherImage {
     display: none;
     margin: 20px auto;
-    display: block; 
+    max-width: 200px; 
 }
 
 header, main, nav, footer {
