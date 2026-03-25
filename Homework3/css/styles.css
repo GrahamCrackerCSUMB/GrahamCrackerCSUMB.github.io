@@ -1,3 +1,7 @@
 #weatherImage {
     display: none;
 }
+
+header, main, nav, footer {
+    text-align:center;
+}
